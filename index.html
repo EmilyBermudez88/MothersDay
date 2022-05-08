@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Ms+Madi&display=swap"
+     rel="stylesheet">
+     <script src="https://kit.fontawesome.com/6d2439e6fd.js" crossorigin="anonymous"></script>
+     <title>Happy Mother's Day</title>
+     <style>
+
+          html{
+               scroll-behavior: smooth;
+          }
+          body{
+               background-color: rgb(125, 69, 182);
+               color:white;
+               font-family:"montserrat";
+               font-size:125%;
+          }
+          .wrapper {
+               width:90%;
+               max-width: 1000px;
+               margin: 0 auto;
+          }
+
+          h2{
+               font-size: 2.9rem;
+               font-family: "Ms Madi";
+               letter-spacing:4px;
+               margin-bottom: 20px;
+          }
+          h2 span {
+               font-size:3.8rem;
+          }
+          h3{
+               font-size:2rem;
+               color: rgb(107, 107, 107);
+          }
+          p{
+               font-weight:200;
+               margin-bottom:20px;
+               font-size:1rem;
+          }
+
+          h1{
+               color:white;
+               font-family: "Ms Madi";
+               font-size: 65px;
+               margin: 0 20px 0 0;
+               width:620px;
+               position:absolute;
+               top:50%;
+               left:50%;
+               transform: translate(-50%,-50%);
+          }
+          h1 span {
+               font-size:100px;
+          }
+
+          header{
+               height:100vh;
+               display:flex;
+               align-items: center;
+               justify-content: center;
+          }
+          .top {
+               position:relative;
+               display:flex;
+               align-items: center;
+               justify-content: center;
+               height:75%;
+               width:1200px;
+          }
+          .headerContainer {
+               position:relative;
+               z-index:1;
+               display:flex;
+               justify-content: space-between;
+               height: 200px;
+               min-width: 880px;
+               max-width: 950px;
+          }
+          .overlay {
+               position:absolute;
+               z-index:2;
+               width:100%;
+               height:100%;
+               display:flex;
+               justify-content: center;
+               align-items: center;
+          }
+          
+          img {
+               max-height:100%;
+          }
+          
+          canvas {
+               background-color: white;
+               width:1000px;
+               position:absolute;
+               height:80%;
+               z-index:0;
+               border: 5px solid rgb(58, 0, 117);
+          }
+          a{
+               position:absolute;
+               /* bottom: 10px; */
+               animation: upDown 1s linear infinite;
+          }
+          i{
+               color:white;
+               font-size:50px;
+               
+          }
+          @keyframes upDown{
+               0%{
+                    bottom: 10px;
+               }
+               50%{
+                    bottom: 20px;
+               }
+               100%{
+                    bottom: 10px;
+               }
+          }
+          
+          main{
+               margin-top:200px;
+          }
+
+          .moreInfo,
+          .personal {
+               background-color: rgba(255,255,255,0.15);
+               padding: 35px;
+          }
+
+          .moreInfo div{
+               display:flex;
+          }
+          .moreInfo img{
+               height:130px;
+               margin-right:20px;
+          }
+
+          .personal {
+               margin-top: 80px;
+               display:flex;
+               justify-content: space-between;
+          }
+          .personal p{
+               margin-bottom: 10px;
+               font-size: 1.2rem;
+          }
+          .personal img {
+               max-height: 700px;
+          }
+          .personal div {
+               display:flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               padding-left: 40px;
+               text-align: center;
+          }
+          .personal .countup-timer{
+               font-weight: 400;
+               color: rgb(185, 236, 56);
+               border: 1px dotted rgb(185, 236, 56);
+               padding:8px;
+               margin:0;
+          }
+
+     </style>
+</head>
+<body>
+     <header>
+          <div class="top">
+               <div class="overlay">
+                    <h3>Click and drag to reveal a message</h3>
+               </div>
+               <div class="headerContainer">
+                    <img src="../Desktop/flower.png" alt="">
+                    <h1><span>H</span>appy <span>M</span>others's <span>D</span>ay</h1>
+                    <img src="../Desktop/flower.png" alt="">
+               </div>
+               <canvas id="draw"></canvas>
+          </div>
+
+          <a href="#moreInfo">
+               <i id="arrow" class="fa-solid fa-angle-down"></i>
+          </a>
+          
+     </header>
+
+     <main class="wrapper">
+          <section class="moreInfo" id="moreInfo">
+               <div>
+                    <img src="../Desktop/flower.png" alt="">
+                    <h2><span>N</span>ever <span>E</span>nough</h2>
+               </div>
+               <p>Sometimes I know the words to say to give thanks for all you've done,
+               but then they fly up and away as quickly as they come.</p>
+               <p>How could I possibly thank you enough, the one who makes me whole,
+               the one to whom I owe my life, the forming of my soul?</p>
+               <p>The one who tucked me in at night, the one who stopped my crying,
+               the one who was the expert at picking up when I was lying.</p>
+               <p>The one who makes such sacrifices to always put me first,
+               who lets me test my broken wings, in spite of how it hurts.
+               </p>
+               <p>Who paints the world a rainbow when it's filled with broken dreams,
+               who explains it all so clearly when nothing is what it seems.
+               </p>
+               <p>Are there really any words for this? I find this question tough.
+               Anything I want to say just doesn't seem enough.</p>
+               <p>What way is there to thank you for your heart, your sweat, your tears,
+               for ten thousand things you've done for oh so many years.
+               </p>
+               <p>For changing with me as I changed, accepting all my flaws,
+               not loving 'cause you had to, but loving just because.</p>
+               <p>For never giving up on me when your wits had reached its end,
+               for always being proud of me, for being my best friend.</p>
+               <p>And so I come to realize, the only way to say,
+               the only thank you that's enough is clear in just one way.</p>
+               <p>Look at me before you see what I've become.
+               Do you see yourself in me, the job that you have done?</p>
+               <p>All your hopes and all your dreams, the strength that no one sees,
+               a transfer over many years, your best was to passed me.</p>
+               <p>Thank you for the gifts you give, for everything you do,
+               but thank you, Mom, most of all for making dreams come true.</p>
+          </section>
+          <section class="personal">
+               <img src="../Desktop/German & Emily -0356.jpg" alt="">
+               <div>
+                    <p>I'm never good with words, but that poem spoke to me and summed up what I wanted to say!</p>
+                    <p>You have been my mom for a grand total of:</p>
+                    <p class="countup-timer"></p>
+                    <p>and I wouldn't change a second of it!</p>
+                    <p>xoxo Emily</p>
+                    <p class="ps">(p.s. this is my adult version of a homemade kids card for Mother's day!)</p>
+               </div>
+          </section>
+     </main>
+
+     <script>
+
+     const overlay = document.querySelector('.overlay');
+     const header = document.querySelector('header');
+     const canvas = document.getElementById('draw');
+     canvas.width = window.innerWidth;
+     canvas.height = window.innerHeight;
+     const ctx = canvas.getContext('2d');
+     
+
+     ctx.strokeStyle = "rgb(125, 69, 182)";
+     ctx.lineJoin= 'round';
+     ctx.lineCap = 'round';
+
+     let lastX = 0;
+     let lastY = 0;
+     let hue = 0;
+
+     console.log(canvas)
+     let isDrawing=false;
+
+     function draw(e){
+          if(!isDrawing) return;
+          if(e.target="header"){
+               isDrawing=false;
+          }
+          if (e.target="div.overlay"){
+               isDrawing=true;
+               console.log(e);
+               lastX = e.clientX;
+               lastY = e.clientY;
+               ctx.beginPath();
+               //start from
+               ctx.moveTo(lastX, lastY);
+               //below is from the mouse event- the go to
+               ctx.lineTo(e.clientX, e.clientY);
+               ctx.stroke();
+               ctx.lineWidth = 100;
+          }        
+     }
+
+     function click(e){
+          isDrawing=true;
+          const h3= document.querySelector('.overlay h3')
+          h3.style.display="none";
+     }
+
+     overlay.addEventListener('mousedown', click);
+     overlay.addEventListener('mousemove', draw)
+     overlay.addEventListener('mouseup', ()=> isDrawing = false);
+
+     let startingDate = new Date('March 15, 1988 16:41').getTime();
+          let counter = document.querySelector('.countup-timer');
+
+          setInterval(function () {
+               let newDate = new Date().getTime();
+               let finalDate = newDate - startingDate;
+
+               let days = Math.floor(finalDate / (1000 * 60 * 60 * 24));
+               let hours = Math.floor((finalDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+               let minutes = Math.floor((finalDate % (1000 * 60 * 60)) / (1000 * 60));
+               let seconds = Math.floor((finalDate % (1000 * 60)) / 1000);
+
+               counter.innerHTML = `${days} days, ${hours} hours, ${minutes} min, and ${seconds}s`
+               
+               days + "d" + hours + "h" + minutes + "m" + seconds + "s";
+          }, 1000)
+     </script>
+</body>
+</html>
